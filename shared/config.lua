@@ -19,20 +19,47 @@ Config.PlayerServerIdPosition = "right"                 -- Position of player's 
 Config.RadioListOnlyShowsToGroupsWithAccess = false     -- If true, the radio list only shows to Config.GroupsWithAccessToTheRadioList
 Config.GroupsWithAccessToTheRadioList = {               -- For ESX it checks if the players' job name matches with any of these groups - For QB it checks if the players' gang name matches and/or if the players' job name matches and they are onduty...
     ["police"] = true,
+    ["sahp"] = true,
+    ["sheriff"] = true,
+    ["pbp"] = true,
+    ["ranger"] = true,
     ["ambulance"] = true,
+    ["firefighter"] = true,
 }
 
 Config.JobsWithCallsign = {                             -- It only detects callsign if the framework is "QB"
     ["police"] = true,
+    ["sahp"] = true,
+    ["sheriff"] = true,
+    ["pbp"] = true,
+    ["ranger"] = true,
     ["ambulance"] = true,
+    ["firefighter"] = true,
 }
 
 Config.LetPlayersOverrideRadioChannelsWithName = false  -- Let players change the name of radio channels that are in Config.RadioChannelsWithName => Only works if Config.LetPlayersChangeRadioChannelsName is set to true
 
 Config.RadioChannelsWithName = {
-    ["0"] = "Admin",                                    -- Every channels between 0 and 1 will be named "Admin"
-    ["1"] = "Police",                                   -- Every channels between 1 and 2 will be named "Police"
-    ["2"] = "Ambulance",                                -- Every channels between 2 and 3 will be named "Ambulance"
+    ["0"]    = "Admin",
+    ["1"]    = "LSPD",
+    ["2"]    = "SAHP",
+    ["3"]    = "BCSO",
+    ["4"]    = "PBP",
+    ["5"]    = "RANGER",
+    ["6"]    = "EMS",
+    ["7"]    = "FIRE",
+    ["8"]    = "All Departments",
+    ["9"]    = "Emergency 1",
+    ["10"]   = "Emergency 2",
+    ["400"]  = "Bad Request",
+    ["401"]  = "Unauthorized",
+    ["403"]  = "Forbidden",
+    ["404"]  = "Channel Not Found",
+    ["418"]  = "I'm A Teapot",
+    ["429"]  = "Too Many Requests",
+    ["451"]  = "Unavailable For Legal Reasons",
+    ["500"]  = "Internal Server Error",
+    --["XXX"]  = "EXAMPLE",
 }
 
 Config.Notification = function(source, message, type)
